@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InstantWeb - Your Quick Browsing Companion</title>
+<style>
+  /* CSS Styling */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  nav {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  nav ul li a:hover {
+    color: #666;
+  }
+  #search-bar {
+    width: 60%;
+    padding: 10px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    border: 2px solid #333;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    display: block;
+    transition: width 0.4s ease;
+  }
+  #search-bar:focus {
+    width: 80%;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to InstantWeb</h1>
+    <p>Your Quick Browsing Companion</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="search.html">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="searching.html">Search</a></li>
+      <li><a href="connect.html">Social</a></li>
+      <li><a href="enjoy.html">Entertainment</a></li>
+    </ul>
+  </nav>
+  <input type="text" id="search-bar" placeholder="Search websites...">
+  <script>
+    // JavaScript for handling search functionality
+    document.getElementById("search-bar").addEventListener("keydown", function(event) {
+      if (event.keyCode === 13) { // Enter key pressed
+        var query = this.value.trim();
+        if (query !== "") {
+          window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
